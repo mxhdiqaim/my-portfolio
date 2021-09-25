@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import GithubState from './context/github/GithubState';
 
-function App() {
+// My Imported Resources
+import Navbar from './components/layout/Navbar';
+import About from './components/layout/About';
+import NotFound from './components/layout/NotFound';
+import ContactReposFooter from './components/layout/ContactReposFooter';
+
+// Styles Sheet
+// import './App.scss';
+// import './App.css';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GithubState>
+      <div className='container'>
+        <Navbar />
+        <Switch>
+          <Route exact path='/' component={About} />
+          <Route exact path='/contact' component={ContactReposFooter} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+    </GithubState>
   );
-}
+};
 
 export default App;
