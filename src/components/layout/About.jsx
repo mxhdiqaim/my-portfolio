@@ -1,7 +1,3 @@
-import React from 'react';
-
-// import '../../App.scss';
-
 const About = () => {
   const myAge = new Date().getFullYear() - 2000;
   const ageInCoding = new Date().getFullYear() - 2018;
@@ -35,16 +31,8 @@ const About = () => {
         </li>
         {/* <li><Link to="#"><i className="fas fa-blog"></i> Check out my blog, feel free to read &#128526;</Link></li> */}
         <li>
-          <i className='fas fa-building'></i> I am Web, App, self taught and
-          pull stack developer at{' '}
-          <a
-            href='https://twitter.com/TheMahdisoft'
-            target='_blank'
-            rel='noreferrer'>
-            Mahdisoft Inc.
-          </a>{' '}
-          &#128515;. A software company with the will of promoting Africa
-          Technologies.
+          <i className='fas fa-building'></i> I am Full-Stack JavaScript, self
+          taught and also Pull-Stack developer &#128515;.
         </li>
         <li>
           You can also reach me out on{' '}

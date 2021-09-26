@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import GithubState from './context/github/GithubState';
 
@@ -9,8 +8,7 @@ import NotFound from './components/layout/NotFound';
 import ContactReposFooter from './components/layout/ContactReposFooter';
 
 // Styles Sheet
-// import './App.scss';
-// import './App.css';
+import './App.scss';
 
 const App = () => {
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import mahdiImg from '../../img/mahdi.jpg';
 import PropTypes from 'prop-types';
@@ -13,7 +13,8 @@ const Navbar = () => {
   // useEffect(() => {getGithubRepos(), []);
   useEffect(() => {
     getGithubRepos();
-    // eslint-diasble-next-line
+
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -28,7 +29,6 @@ const Navbar = () => {
       </div>
       <div className='navbar-links'>
         <h1>NigerianCoder</h1>
-        <p style={styles}>Mahdi Abubakar</p>
         <ul id='navbar'>
           <li>
             <Link className='a' to='/'>
@@ -52,14 +52,6 @@ const Navbar = () => {
 Navbar.propsType = {
   darkMode: PropTypes.bool.isRequired,
   toggleDarkMode: PropTypes.func.isRequired,
-};
-
-const styles = {
-  marginTop: '-20px',
-  marginRight: '18px',
-  marginBottom: '10px',
-  textDecoration: 'underline',
-  fontStyle: 'italic',
 };
 
 export default Navbar;
