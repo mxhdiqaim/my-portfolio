@@ -24,6 +24,7 @@ const Navbar = () => {
           position: 'absolute',
           right: '24px',
           top: '20px',
+          cursor: 'pointer',
         }}
         onClick={setNightmode}>
         {nightMode ? <i class='far fa-sun' /> : <i class='fal fa-moon' />}
