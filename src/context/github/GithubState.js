@@ -9,7 +9,7 @@ const GithubState = props => {
   const initialState = {
     repos: [],
     loading: false,
-    nightMode: false,
+    nightMode: true,
   };
 
   const [state, dispatch] = useReducer(GithubReducer, initialState);
@@ -28,9 +28,24 @@ const GithubState = props => {
     });
   };
 
+  const toggleDarkMode = () => {
+    if (state.nightMode) {
+      document.getElementById('body').style.background = '#333333';
+      document.getElementById('body').style.color = '#ffffff';
+      document.getElementById('a').style.color = '#ffffff';
+      document.getElementById('b').style.color = '#ffffff';
+    } else {
+      document.getElementById('body').style.background = '#ffffff';
+      document.getElementById('body').style.color = '#333333';
+      document.getElementById('a').style.color = '#333333';
+      document.getElementById('b').style.color = '#333333';
+    }
+  };
+
   // Nightmode toggler
   const setNightmode = () => {
     dispatch({ type: SET_MODE, payload: state.nightMode });
+    toggleDarkMode();
   };
 
   // SetLoading
@@ -44,6 +59,7 @@ const GithubState = props => {
         nightMode: state.nightMode,
         getGithubRepos,
         setNightmode,
+        toggleDarkMode,
       }}>
       {props.children}
     </GithubContext.Provider>

@@ -34,6 +34,8 @@ body {
   line-height: 1.6;
   // background: $dark-color;
   // color: set-text-color($dark-color);
+  transition: color 0.8s ease;
+  transition: background 0.8s ease;
 }
 
 .bck-2-H {

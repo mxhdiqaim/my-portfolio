@@ -12,6 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     getGithubRepos();
+
     // eslint-disable-next-line
   }, []);
 
@@ -39,12 +40,16 @@ const Navbar = () => {
         <h1>NigerianCoder</h1>
         <ul id='navbar'>
           <li>
-            <Link className='a' to='/'>
+            <Link id='a' className='a link' to='/'>
               About
             </Link>
           </li>
           <li>
-            <Link to='/contact' className='b' onClick={getGithubRepos}>
+            <Link
+              id='b'
+              to='/contact'
+              className='b link'
+              onClick={getGithubRepos}>
               Contact
             </Link>
           </li>
