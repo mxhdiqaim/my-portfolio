@@ -1,5 +1,6 @@
 export const SET_LOADING = 'SET_LOADING';
 export const GET_REPOS = 'GET_REPOS';
+export const SET_MODE = 'SET_MODE';
 
 /*
 export const SEARCH_USERS = 'SEARCH_USERS';

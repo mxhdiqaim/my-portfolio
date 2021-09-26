@@ -32,10 +32,13 @@ body {
   font-family: Helvetica, sans-serif;
   font-size: 1.2rem;
   line-height: 1.6;
+  // background: $dark-color;
+  // color: set-text-color($dark-color);
 }
 
 .bck-2-H {
-  color: #333333;
+  // color: #333333;
+  color: set-text-color($dark-color);
   background: #dddddd;
   padding: 10px;
   border-radius: 3px;
@@ -486,6 +489,7 @@ table th {
   align-items: center;
   padding: 1.7rem 0.4rem;
   width: 100%;
+  position: relative;
 
   h1 {
     font-size: 2.5rem;
@@ -512,7 +516,8 @@ table th {
         list-style: none;
 
         a {
-          color: set-text-color($light-color);
+          // color: set-text-color($dark-color);
+          color: $dark-color;
           margin: 0 0.25rem;
           transition: color 0.5s ease;
           transition: border 0.5s ease;
@@ -608,5 +613,17 @@ table th {
   .navbar ul {
     text-align: center;
     justify-content: center;
+  }
+}
+
+// DEFAULT SYSTEM COLOR SCHEME
+@media (prefers-color-scheme: dark) {
+  body {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+
+  .navbar .navbar-links ul li a {
+    color: set-text-color($dark-color);
   }
 }

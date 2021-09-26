@@ -3,12 +3,13 @@ import axios from 'axios';
 import GithubContext from './githubContext';
 import GithubReducer from './githubReducer';
 
-import { SET_LOADING, GET_REPOS } from '../types';
+import { SET_LOADING, GET_REPOS, SET_MODE } from '../types';
 
 const GithubState = props => {
   const initialState = {
     repos: [],
     loading: false,
+    nightMode: false,
   };
 
   const [state, dispatch] = useReducer(GithubReducer, initialState);
@@ -27,6 +28,11 @@ const GithubState = props => {
     });
   };
 
+  // Nightmode toggler
+  const setNightmode = () => {
+    dispatch({ type: SET_MODE, payload: state.nightMode });
+  };
+
   // SetLoading
   const setLoading = () => dispatch({ type: SET_LOADING });
 
@@ -35,7 +41,9 @@ const GithubState = props => {
       value={{
         repos: state.repos,
         loading: state.loading,
+        nightMode: state.nightMode,
         getGithubRepos,
+        setNightmode,
       }}>
       {props.children}
     </GithubContext.Provider>

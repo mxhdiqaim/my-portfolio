@@ -8,17 +8,25 @@ import GithubContext from '../../context/github/githubContext';
 const Navbar = () => {
   const githubContext = useContext(GithubContext);
 
-  const { getGithubRepos } = githubContext;
+  const { getGithubRepos, setNightmode, nightMode } = githubContext;
 
-  // useEffect(() => {getGithubRepos(), []);
   useEffect(() => {
     getGithubRepos();
-
     // eslint-disable-next-line
   }, []);
 
   return (
     <div className='navbar'>
+      <p
+        style={{
+          float: 'right',
+          position: 'absolute',
+          right: '24px',
+          top: '20px',
+        }}
+        onClick={setNightmode}>
+        {nightMode ? <i class='far fa-sun' /> : <i class='fal fa-moon' />}
+      </p>
       <div className='navbar-img'>
         <img
           src={mahdiImg}
@@ -35,9 +43,6 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          {/* <li>
-                        <Link to='/blog'>Blog</Link>
-                    </li> */}
           <li>
             <Link to='/contact' className='b' onClick={getGithubRepos}>
               Contact
