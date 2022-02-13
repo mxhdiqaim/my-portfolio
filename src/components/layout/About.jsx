@@ -26,10 +26,18 @@ const About = () => {
             href='https://github.com/mahdiabubakar'
             target='_blank'
             rel='noreferrer'>
-            <i className='fab fa-github'></i> My Github repo
+            <i className='fab fa-github' /> My Github repo
           </a>
         </li>
-        {/* <li><Link to="#"><i className="fas fa-blog"></i> Check out my blog, feel free to read &#128526;</Link></li> */}
+        <li>
+          <a
+            href='https://linktr.ee/nigeriancoder'
+            target='_blank'
+            rel='noreferrer'>
+            <i className='fad fa-tasks' style={{ padding: '0 4px' }} />
+            Check out my projects &#128526;
+          </a>
+        </li>
         <li>
           <i className='fas fa-building'></i> I am Full-Stack JavaScript, self
           taught and also Pull-Stack developer &#128515;.
