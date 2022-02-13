@@ -11,7 +11,7 @@ To use this repo, clone it, edit to make it yours, and then save! The project is
 To clone, run
 
 ```
-    git clone git@github.com:mahdiabubakar/me.git
+    git clone git@github.com:mahdiabubakar/my-portfolio.git
 ```
 
 Then run
